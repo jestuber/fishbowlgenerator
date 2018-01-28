@@ -1,0 +1,27 @@
+<html lang="en-US">
+<head>
+<link rel="stylesheet" type="text/css" href="main.css">
+<script type="text/javascript" src="randomword.js"></script>
+</head>
+
+<body>
+<h1 class="hide-on-print">Fishbowl Game Word Generator</h1>
+
+<form class="hide-on-print">
+  Number of Players:  <input name="numPlayers" type="number" min="1" max="50" value="10"><br>
+  Number of cards per Player:  <input name="numCards" type="number" min="1" max="5" value="3"><br>
+  Word Difficulty: <select>
+      <option>Easy</option>
+      <option>Medium</option>
+      <option>Hard</option>
+  </select><br>
+  <INPUT TYPE="button" NAME="button" Value="Create Cards!" onClick="randomWord(this.form)">
+
+</form>
+
+<div id="result"></div>
+
+<input type="button" class="hide-on-print" onClick="window.print()" value="Print Your Cards!"/>
+</body>
+
+</html>
