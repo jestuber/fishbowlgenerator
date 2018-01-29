@@ -15,7 +15,18 @@
     .print-only { display: block !important; }
     #result {font-size: 36px;}
 }
+.card{
+  width: 175px;
 
+  display: inline-block;
+  border: dashed 2px black;
+  margin: 1px;
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: bolder;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
 @media screen {
     h1 {color: #ff0000;}
     #result {font-size: 36px;}
