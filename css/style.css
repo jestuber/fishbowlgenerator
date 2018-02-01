@@ -38,6 +38,11 @@
 			text-decoration: none;
 		}
 
+		h2, h3
+		{
+			font-size: 1.5em;
+		}
+
 	/* Change this to whatever font weight/color pairing is most suitable */
 	strong, b
 	{
@@ -985,7 +990,7 @@
 /* Cards                                                                         */
 /*********************************************************************************/
 	.card{
-	  width: 215px;
+	  width: 250px;
 
 	  display: inline-block;
 	  border: dashed 2px black;
