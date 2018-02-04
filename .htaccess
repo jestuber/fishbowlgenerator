@@ -1,2 +1,4 @@
-RewriteEngine Off
-RewriteEngine On
+#Force non-www:
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.fishbowlwords\.com [NC]
+RewriteRule ^(.*)$ https://fishbowlwords.com/$1 [L,R=301]
