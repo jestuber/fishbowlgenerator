@@ -2,21 +2,23 @@ function randomWord(form) {
   $("#cards").html("")
   var numPlayers = $('#numPlayers').val();
   var numCards = $('#numCards').val();
+  var diff = $('#diff').find(":selected").text();
 
   var numWords = numPlayers * numCards
   let remainder = 0
-  if(numWords % 3 != 0){
-
-    remainder = numWords % 3 
+  if(numWords % 2 != 0){
+    remainder = numWords % 2
   }
-  numWords = Math.floor(numWords / 3)
+  numWordsHalf = Math.floor(numWords / 2)
 
-  let randomThings = _.sample(things, numWords + remainder)
-  
+  if (diff == "Easy") {
+      var randomWords = _.sample(easy, numWords + remainder)
+  } else if (diff == "Medium"){
+      var randomWords = _.shuffle((_.sample(easy, numWordsHalf + remainder)).concat(_.sample(hard, numWordsHalf)))
+  } else {
+      var randomWords = _.sample(hard, numWords + remainder)
+  }
 
-
-  let randomWords = _.shuffle((_.sample(things, numWords + remainder)).concat(_.sample(places, numWords), _.sample(people, numWords)))
-  
   randomWords.forEach((word, index)=>{
   $("#cards").append("<div class='card'>"+word+"</div>")
   })
