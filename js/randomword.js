@@ -11,12 +11,12 @@ function randomWord(form) {
   }
   numWordsHalf = Math.floor(numWords / 2)
 
-  if (diff == "Easy") {
-      var randomWords = _.sample(easy, numWords + remainder)
+  if (diff == "Hard") {
+      var randomWords = _.sample(hard, numWords + remainder)
   } else if (diff == "Medium"){
       var randomWords = _.shuffle((_.sample(easy, numWordsHalf + remainder)).concat(_.sample(hard, numWordsHalf)))
   } else {
-      var randomWords = _.sample(hard, numWords + remainder)
+      var randomWords = _.sample(easy, numWords + remainder)
   }
 
   randomWords.forEach((word, index)=>{
